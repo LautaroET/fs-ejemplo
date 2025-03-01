@@ -1,14 +1,13 @@
-import fs from 'fs';
-fs.readFile('./data/example.txt','utf-8',(err,data)=>{
+import fs from 'fs'
+fs.readFile('./data/example.txt','utf8',(err,data)=>{
     if(err) throw err;
-    console.log('Contenido del archivo:',data);
-})
-fs.writeFile('./data*/newFile.txt','Contenido nuevo',(err)=>{
+    console.log('Contenido del Archivo',data);
+});
+fs.writeFile('./data/newFile.txt','Contenido Nuevo',(err)=>{
     if(err) throw err;
-    console.log("Archivo creado y escrito");
-})
-
+    console.log('Archivo Creado y escrito');
+});
 fs.rename('./data/newFile.txt','./data/renameFile.txt',(err)=>{
     if(err) throw err;
-    console.log('Archivo Renombrado');
-})
+    console.log('Archivo renombrado');
+});
